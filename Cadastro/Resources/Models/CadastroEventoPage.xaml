@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cadastro.Resources.Models.CadastroEventoPage"
+             Title="Cadastro Evento"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Secondary}">
+    
+    
+    <StackLayout Padding="20">
+
+        <Label Text="Nome do Evento" 
+                TextColor="{StaticResource Primary}"/>
+        <Entry Text="{Binding Evento.Nome}" />
+
+        <Label Text="Data de Início" />
+        <DatePicker Date="{Binding Evento.DataInicio, StringFormat= 'dd/MM/yyyy'}" /> 
+                    
+
+        <Label Text="Data de Término" />
+        <DatePicker Date="{Binding Evento.DataTermino, StringFormat='dd/MM/yyyy'}" />
+
+
+        <Label Text="Número de Participantes" 
+                TextColor="{StaticResource Primary}"/>
+        <Entry Text="{Binding Evento.NumeroParticipantes}" Keyboard="Numeric" />
+
+        <Label Text="Local do Evento" 
+                TextColor="{StaticResource Primary}"/>
+        <Entry Text="{Binding Evento.Local}" />
+
+        <Label Text="Custo por Participante" 
+                TextColor="{StaticResource Primary}"/>
+        <Entry Text="{Binding Evento.CustoPorParticipante}" Keyboard="Numeric" />
+
+        <Button Text="Cadastrar Evento"
+                Command="{Binding CadastrarEventoCommand}" 
+                 TextColor="{StaticResource MidnightBlue}"
+                />
+
+    </StackLayout>
+</ContentPage>

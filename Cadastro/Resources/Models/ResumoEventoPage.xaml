@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cadastro.Resources.Models.ResumoEventoPage"
+             Title="ResumoEventoPage"
+              NavigationPage.HasNavigationBar="False"
+              BackgroundColor="{StaticResource Secondary}">
+    
+    
+    <StackLayout Padding="20">
+
+        <Label Text="Resumo do Evento" FontSize="Large" />
+
+        <Label Text="Nome do Evento:" 
+                TextColor="{StaticResource Primary}"/>
+
+        <Label Text="{Binding Nome}" 
+               TextColor="{StaticResource Magenta}"
+               HorizontalTextAlignment="Center"/>
+        <Label Text="Data de Início:" 
+                TextColor="{StaticResource Primary}"/>
+
+        <Label Text="{Binding DataInicio, StringFormat='{0:dd/MM/yyyy}'}" 
+               TextColor="{StaticResource Magenta}"
+                HorizontalTextAlignment="Center"/>
+        
+
+        <Label Text="Data de Término:" 
+               TextColor="{StaticResource Primary}" />
+        <Label Text="{Binding DataTermino, StringFormat='{0:dd/MM/yyyy}'}" 
+               TextColor="{StaticResource Magenta}"
+                HorizontalTextAlignment="Center"/>
+
+        <Label Text="Duração em Dias:" 
+               TextColor="{StaticResource Primary}" />
+        <Label Text="{Binding DuracaoEmDias}" 
+                HorizontalTextAlignment="Center"
+                TextColor="{StaticResource Magenta}"/>
+
+        <Label Text="Número de Participantes:" 
+              TextColor="{StaticResource Primary}"  />
+        <Label Text="{Binding NumeroParticipantes}" 
+               TextColor="{StaticResource Magenta}"
+                HorizontalTextAlignment="Center"/>
+
+        <Label Text="Local:" 
+               TextColor="{StaticResource Primary}"  />
+        <Label Text="{Binding Local}"  
+               TextColor="{StaticResource Magenta}"
+               HorizontalTextAlignment="Center"/>
+
+        <Label Text="Custo por Participante:" 
+              TextColor="{StaticResource Primary}"  />
+        <Label Text="{Binding CustoPorParticipante, StringFormat='R$ {0:F2}'}" 
+               TextColor="{StaticResource Magenta}"
+                HorizontalTextAlignment="Center"/>
+
+        <Label Text="Custo Total do Evento:" 
+          TextColor="{StaticResource Primary}" />
+        <Label Text="{Binding CustoTotal, StringFormat='R$ {0:F2}'}" 
+               TextColor="{StaticResource Magenta}"
+                HorizontalTextAlignment="Center"/>
+
+        
+
+    </StackLayout>
+</ContentPage> 
